@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <h1>Salesforce取引先(郵便番号 ZipCode)</h1>
+    <a href="https://aokinao-dev-ed.lightning.force.com/lightning/r/Account/0012800000mhWJbAAM/view">(aokin)接続先のSalesforce Developer Edition環境</a>
+    <br><br>
+    <ul>
+	<a class="btn btn-primary" href="{{ url_for('zipcode.find_all') }}">Salesforce取引先の再表示(郵便番号)</a><br>
+    </ul>
+
+    <div class="displaytext">
+      <p>{{ zipcode }}
+      </p>
+    </div>
+
+{% endblock %}

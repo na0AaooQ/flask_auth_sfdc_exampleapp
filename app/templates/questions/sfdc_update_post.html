@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <div>
+        <h3>Salesforce取引先データの更新</h3>
+	<div>
+	  IdにSalesforceレコードID(例 0012800000mhWJWAA2)を入力する。<br>
+	  Nameに新しい取引先名を入力する。<br><br>
+	</div>
+        <div>
+            <form action="/questions/sfdc/update" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="id" placeholder="Id" autofocus="">
+                    </div>
+                    <div>
+                        <input type="text" name="name" placeholder="Name" autofocus="">
+                   </div>
+                </div>
+                <button>更新する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

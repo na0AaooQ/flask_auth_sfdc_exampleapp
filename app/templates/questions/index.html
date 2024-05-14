@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <h1>(テスト用)メモ</h1>
+    <ul>
+	<a class="btn btn-primary" href="{{ url_for('questions.find_all') }}">メモ一覧の再表示</a>
+	<a class="btn btn-primary" href="{{ url_for('questions.add') }}">メモの追加</a><br><br>
+    </ul>
+
+    {% for question in questions %}
+        <p>{{ question.title }} // {{ question.body }}
+            <span><button><a href="{{ url_for('questions.find_one', question_id=question.id) }}">メモの詳細表示</a></button></span>
+            <span><button><a href="{{ url_for('questions.update', question_id=question.id) }}">メモの更新</a></button></span>
+        <form action="{{ url_for('questions.delete', question_id=question.id) }}" method="POST">
+            <button type="submit"><a>メモの削除</a></button>
+        </form>
+        </p>
+    {% endfor %}
+
+{% endblock %}

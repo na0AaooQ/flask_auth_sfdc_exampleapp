@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <h1>(テスト用)メモ</h1>
+    <ul>
+	<a class="btn btn-primary" href="{{ url_for('questions.find_all') }}">メモ一覧へ戻る</a>
+	<a class="btn btn-primary" href="{{ url_for('questions.add') }}">メモの追加</a>
+    </ul>
+    <ul>
+        <p>Title：{{ question.title }}</p>
+        <p>Body：{{ question.body }}</p>
+    </ul>
+{% endblock %}

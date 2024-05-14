@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <h1>Salesforce取引先データの検索結果</h1>
+    <ul>
+	<a class="btn btn-primary" href="{{ url_for('questions.find_sfdc_search_data') }}">Salesforce取引先の検索画面へ戻る</a>
+    </ul>
+
+    <div class="displaytext">
+      <p>{{ question }}
+      </p>
+    </div>
+
+{% endblock %}

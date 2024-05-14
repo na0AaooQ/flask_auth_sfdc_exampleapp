@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <div>
+        <h3>Salesforce取引先データの登録</h3>
+	<div>
+	  Nameに新しく登録する取引先名(テスト取引先_青木直之_20240124_0219)、<br>
+	  Phoneに取引先の電話番号(例:09011112222)を入力する。<br><br>
+	</div>
+        <div>
+            <form action="/questions/sfdc/create" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="name" placeholder="Name" autofocus="">
+                    </div>
+                    <div>
+                        <input type="text" name="phone" placeholder="Phone" autofocus="">
+                   </div>
+                </div>
+                <button>登録する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

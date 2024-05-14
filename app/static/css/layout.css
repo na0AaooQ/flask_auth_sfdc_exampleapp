@@ -1,0 +1,23 @@
+.title {
+  padding: 20px;              /* 余白指定 */
+  text-align:  center;        /* 中央寄せ */
+  height: 100px;              /* 高さ指定 */
+}
+
+.container {
+  width: 1200px;
+  height: 100px;
+  text-align: center;
+}
+
+.child {
+  padding: 20px;              /* 余白指定 */
+  text-align:  center;        /* 中央寄せ */
+  height: 100px;              /* 高さ指定 */
+}
+
+.displaytext {
+  position:absolute;
+  left:0;
+  text-align: left;
+}

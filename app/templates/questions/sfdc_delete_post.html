@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <div>
+        <h3>Salesforce取引先データの削除</h3>
+	<div>
+	  Salesforceから削除する取引先データのSalesforceレコードID(例: 001IU00002mzgQIYAY)を入力する。<br><br>
+	</div>
+        <div>
+            <form action="/questions/sfdc/delete" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="id" placeholder="Id" autofocus="">
+                    </div>
+                </div>
+                <button>削除する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l
