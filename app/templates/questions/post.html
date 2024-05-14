@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/layout.css"><br>
+    <div>
+        <h3>(テスト用)メモの追加</h3>
+        <div>
+            <form action="/questions/add" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="title" placeholder="Title" autofocus="">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="body" placeholder="Body" autofocus="">
+                    </div>
+                </div>
+                <button>追加する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

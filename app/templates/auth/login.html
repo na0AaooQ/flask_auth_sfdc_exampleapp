@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div>
+        <h3>ログイン</h3>
+        <form method="POST" action="/login">
+            <div>
+                <input type="email" name="email" placeholder="Your Email" autofocus="">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Your Password">
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox">
+                    ログイン情報を記憶しますか？
+                </label>
+            </div>
+            <button>ログイン</button>
+        </form>
+    </div>
+{% endblock %}
